@@ -12,6 +12,7 @@ func main() {
 
 	// 提供字面字符
 	r.GET("/purejson", purejson)
+	r.GET("/JSONP", JSONP)
 
 	// 监听并在 0.0.0.0:8080 上启动服务
 	r.Run(":8080")
