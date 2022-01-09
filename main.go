@@ -11,11 +11,7 @@ func main() {
 	r.GET("/json", json)
 
 	// 提供字面字符
-	r.GET("/purejson", func(c *gin.Context) {
-		c.PureJSON(200, gin.H{
-			"html": "<b>Hello, world!</b>",
-		})
-	})
+	r.GET("/purejson", purejson)
 
 	// 监听并在 0.0.0.0:8080 上启动服务
 	r.Run(":8080")
